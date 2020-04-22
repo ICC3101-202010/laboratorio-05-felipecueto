@@ -4,18 +4,13 @@ using System.Text;
 using System.Threading;
 namespace Lab5
 {
-    public class Emailsent
+    public class EmailVerifed
     {
-
-        public void OnEmailsented(object source, EventArgs args)
+        public void OnEmailVerified(object source, EventArgs args)
         {
             Thread.Sleep(2000);
-            Console.WriteLine("El correo fue enviado correctamente al usuario");
+            Console.WriteLine("Su Correo a sido verificado");
             Thread.Sleep(2000);
         }
-
-        
-
     }
-
 }

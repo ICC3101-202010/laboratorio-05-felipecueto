@@ -39,6 +39,8 @@
     <Compile Include="DataBase.cs" />
     <Compile Include="MailSender.cs" />
     <Compile Include="Emailsent.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="EmailVerifed.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
