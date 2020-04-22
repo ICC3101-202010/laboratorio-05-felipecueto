@@ -31,6 +31,7 @@ namespace Lab5
         // Paso 3: Publicamos el evento. Notar que cuando se quiere engatillar el evento, se llama OnPasswordChanged(). 
         // Por definicion, debe ser protected virtual. Los parametros que recibe son los necesarios para crear una instancia
         // de la clase ChangePasswordEventArgs
+
         protected virtual void OnPasswordChanged(string username, string email, string number)
         {
             if (PasswordChanged != null)
