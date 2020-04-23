@@ -121,5 +121,15 @@ namespace Lab5
             }
             return "http://pluscorporation.com/verificar-correo.php?=" + usr + "_" + result;
         }
+
+        //Parte Tarea
+        public void OnEmailVerified(object source, EventArgs args)
+        {
+            Console.Clear();
+            Thread.Sleep(2000);
+            Console.WriteLine("Su Correo a sido verificado Correctamente");
+            Thread.Sleep(2000);
+        }
+
     }
 }

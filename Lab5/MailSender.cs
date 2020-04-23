@@ -6,15 +6,14 @@ namespace Lab5
 {
     public class MailSender
     {
-         
-        public delegate void EmailsentEventHandler(object source, EventArgs args);
-        public event EmailsentEventHandler Emailsented;
-
-        protected virtual void OnEmailsented()
+        //Parte Tarea
+        public delegate void EmailsendEventHandler(object source, EventArgs args);
+        public event EmailsendEventHandler EmailSent;
+        protected virtual void OnEmailSent()
         {
-            if (Emailsented!= null)
+            if (EmailSent!= null)
             {
-                Emailsented(this, new EventArgs() { });
+                EmailSent(this, new EventArgs() { });
             }
         }
 
@@ -23,11 +22,8 @@ namespace Lab5
             Thread.Sleep(2000);
             Console.WriteLine($"\nCorreo enviado a {e.Email}: \n Gracias por registrarte, {e.Username}!\n Por favor, para poder verificar tu correo, has click en: {e.VerificationLink}\n");
             Thread.Sleep(2000);
-            bool sent = true;
-            if (sent)
-            {
-                OnEmailsented();
-            }
+            OnEmailSent();
+            
         }
 
         public void OnPasswordChanged(object source, ChangePasswordEventArgs e)
@@ -36,6 +32,7 @@ namespace Lab5
             Console.WriteLine($"\nCorreo enviado a {e.Email}:  \n {e.Username}, te notificamos que la contrasena de tu cuenta PlusCorp ha sido cambiada. \n");
             Thread.Sleep(2000);
         }
-         
+
+       
     }
 }

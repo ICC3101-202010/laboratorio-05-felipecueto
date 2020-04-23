@@ -38,7 +38,6 @@
     <Compile Include="ChangePasswordEventArgs.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="MailSender.cs" />
-    <Compile Include="Emailsent.cs" />
     <Compile Include="User.cs" />
     <Compile Include="EmailVerifed.cs" />
   </ItemGroup>
